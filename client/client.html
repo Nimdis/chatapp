@@ -5,10 +5,17 @@
 <body>
   <h1>Chatapp</h1>
   {{> welcome}}
+  {{> messages}}
 </body>
 
 <template name="welcome">
   <p>
     Welcome to example
   </p>
+</template>
+
+<template name="messages">
+  {{#each messages}}
+    <strong>{{name}}:</strong> {{message}} <br />
+  {{/each}}
 </template>
